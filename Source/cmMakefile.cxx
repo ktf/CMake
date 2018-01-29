@@ -239,7 +239,7 @@ void cmMakefile::PrintCommandTrace(const cmListFileFunction& lff) const
 
   std::ostringstream msg;
   msg << "(" << std::fixed << cmSystemTools::GetTime();
-  msg << ") (" << this->CallStack.size() << ") ";
+  msg << ") (" << this->ExecutionStatusStack.size() << ") ";
   msg << full_path << "(" << lff.Line << "):  ";
   msg << lff.Name << "(";
   bool expand = this->GetCMakeInstance()->GetTraceExpand();
